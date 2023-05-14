@@ -3,5 +3,6 @@
     <style name="Base.Theme.WooDongGo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimaryDark">#000000</item> //상태바 색상 변경
     </style>
 </resources>

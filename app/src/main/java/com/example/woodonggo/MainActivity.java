@@ -26,16 +26,33 @@ public class MainActivity extends AppCompatActivity {
         myPage_fragment_main = new MyPage_Fragment_Main();
 
         //기본화면 지정
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, home_fragment_main);
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, home_fragment_main).commit();
+
         NavigationBarView navigationBarView = findViewById(R.id.navigationView);
         navigationBarView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
-                    //TODO: 선택한 아이템의 아이디에 따라서 다른 프레그먼트 보여주기
+                if (item.getItemId() == R.id.home_item){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, home_fragment_main).commit();
+                    return true;
                 }
-                return false;
+                else if (item.getItemId() == R.id.ranking_item) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, ranking_fragment_main).commit();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.local_item) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, local_fragment_main).commit();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.chat_item) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, chat_fragment_main).commit();
+                    return true;
+                }
+                else {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, myPage_fragment_main).commit();
+                    return true;
+                }
             }
         });
     }
