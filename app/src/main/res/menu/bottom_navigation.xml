@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--아이콘 추가하기-->
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/outline_sensor_door_24"
+        android:title="홈"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/ranking"
+        android:enabled="true"
+        android:icon="@drawable/round_star_outline_28"
+        android:title="랭킹"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/local"
+        android:enabled="true"
+        android:icon="@drawable/outline_place_24"
+        android:title="동네대결장"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/chat"
+        android:enabled="true"
+        android:icon="@drawable/outline_chat_24"
+        android:title="채팅"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/myPage"
+        android:enabled="true"
+        android:icon="@drawable/outline_account_circle_24"
+        android:title="마이페이지"
+        app:showAsAction="always" />
+</menu>
