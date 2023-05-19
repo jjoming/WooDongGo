@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="home_item" type="id"/>
+    <item name="ranking_item" type="id"/>
+    <item name="local_item" type="id"/>
+    <item name="chat_item" type="id"/>
+    <item name="myPage_item" type="id"/>
+</resources>
