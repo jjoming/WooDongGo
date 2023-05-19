@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/skyBlue"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="320dp"
@@ -18,9 +19,10 @@
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/main_logo"/>
 
-    <View
+    <ImageView
         android:id="@+id/main_logo"
         android:layout_width="196dp"
         android:layout_height="196dp"
@@ -32,21 +34,21 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@+id/et_Id"/>
 
-    <android.widget.Button
-        android:id="@+id/btn_Login"
+    <EditText
+        android:id="@+id/et_Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/login_edit2"
-        android:text="로그인"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        app:layout_constraintHorizontal_bias="0.269"
-        app:layout_constraintLeft_toRightOf="@id/btn_Signup"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_edit"
+        android:hint="   아이디"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_Password" />
+        app:layout_constraintTop_toBottomOf="@id/main_logo"
+        app:layout_constraintBottom_toTopOf="@+id/et_Password"/>
 
     <EditText
         android:id="@+id/et_Password"
@@ -61,6 +63,33 @@
         app:layout_constraintTop_toBottomOf="@id/et_Id"
         app:layout_constraintBottom_toTopOf=""/>
 
+    <android.widget.Button
+        android:id="@+id/btn_Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_edit3"
+        android:text="회원가입"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_Login"
+        app:layout_constraintTop_toBottomOf="@id/et_Password"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kakao"/>
+
+    <android.widget.Button
+        android:id="@+id/btn_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_edit2"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintLeft_toRightOf="@id/btn_Signup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_Password"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kakao"/>
+
     <android.widget.ImageButton
         android:id="@+id/btn_kakao"
         android:layout_width="wrap_content"
@@ -74,44 +103,6 @@
         app:layout_constraintTop_toBottomOf="@id/btn_Signup" />
 
     <TextView
-        android:id="@+id/findPw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginRight="10dp"
-        android:text="비밀번호 찾기"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        app:layout_constraintHorizontal_bias="0.269"
-        app:layout_constraintLeft_toRightOf="@id/findId"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_kakao" />
-
-    <EditText
-        android:id="@+id/et_Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/login_edit"
-        android:hint="   아이디"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_logo" />
-
-    <android.widget.Button
-        android:id="@+id/btn_Signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/login_edit3"
-        android:text="회원가입"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btn_Login"
-        app:layout_constraintTop_toBottomOf="@id/et_Password" />
-
-
-    <TextView
         android:id="@+id/findId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -123,7 +114,22 @@
         app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/findPw"
-        app:layout_constraintTop_toBottomOf="@id/btn_kakao" />
+        app:layout_constraintTop_toBottomOf="@id/btn_kakao"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <TextView
+        android:id="@+id/findPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginRight="10dp"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintLeft_toRightOf="@id/findId"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_kakao"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
