@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Login_Main_Activity"
+            android:exported="false">
+            <!--TODO: 추후 parent추가-->
+        </activity>
     </application>
 
 </manifest>
