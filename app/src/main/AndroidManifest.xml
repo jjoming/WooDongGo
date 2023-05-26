@@ -13,7 +13,7 @@
         android:theme="@style/Theme.WooDongGo"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".AppStart1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:parentActivityName=".AppStart5"/>
+        <activity
+            android:name=".AppStart2"
+            android:exported="false"
+            android:parentActivityName=".AppStart1"/>
+        <activity
+            android:name=".AppStart3"
+            android:exported="false"
+            android:parentActivityName=".AppStart2"/>
+        <activity
+            android:name=".AppStart4"
+            android:exported="false"
+            android:parentActivityName=".AppStart3"/>
+        <activity
+            android:name=".AppStart5"
+            android:exported="false"
+            android:parentActivityName=".AppStart4"/>
+
     </application>
 
 </manifest>
