@@ -43,6 +43,11 @@
             android:exported="false"
             android:parentActivityName=".AppStart4"/>
 
+        <activity
+            android:name=".Login_MainActivity"
+            android:exported="false"
+            android:parentActivityName=".AppStart5"/>
+
     </application>
 
 </manifest>

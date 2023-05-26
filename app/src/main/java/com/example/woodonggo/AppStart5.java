@@ -15,7 +15,8 @@ public class AppStart5 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(AppStart5.this, MainActivity.class);
+                // todo : 자동로그인시 메인액티비티로 넘어가기
+                Intent intent = new Intent(AppStart5.this, Login_MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0,0);
                 finish();
