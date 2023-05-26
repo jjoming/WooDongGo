@@ -10,17 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text_myPage"
-            android:fontFamily="@font/notosanskr_regular"
-            android:text="마이페이지"
-            android:textSize="24sp"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:menu="@menu/mypage_toolbar"/>
+
+        <ImageView
+            android:id="@+id/text_myPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:src="@drawable/img_mypage"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

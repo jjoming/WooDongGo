@@ -14,6 +14,6 @@ public class Home_Tab_personal extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home__tab_personal, container, false);
+        return inflater.inflate(R.layout.home_tab_personal, container, false);
     }
 }

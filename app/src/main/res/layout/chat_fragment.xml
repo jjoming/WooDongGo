@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Ranking_Fragment_Main">
+    tools:context=".Chat_Fragment_Main">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,26 +17,26 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:menu="@menu/ranking_toolbar">
+            app:menu="@menu/home_toolbar">
 
             <TextView
                 android:id="@+id/text_chat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:fontFamily="@font/notosanskr_bold"
-                android:text="동네랭킹"
+                android:text="채팅"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
         </androidx.appcompat.widget.Toolbar>
 
         <ImageView
-            android:id="@+id/img_ranking"
+            android:id="@+id/img_chat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/img_ranking"/>
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/img_chat"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
