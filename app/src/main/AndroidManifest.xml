@@ -47,6 +47,10 @@
             android:name=".Login_MainActivity"
             android:exported="false"
             android:parentActivityName=".AppStart5"/>
+        <activity
+            android:name="Signup_MainActivity"
+            android:exported="false"
+            android:parentActivityName=".Login_MainActivity" />
 
     </application>
 
