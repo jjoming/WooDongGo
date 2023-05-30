@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/before"
-        android:enabled="true"
-        android:title="마이페이지_툴바_before"
-        android:icon="@drawable/toolbar_before_24"
-        app:showAsAction="always"/>
-
+    
     <item
         android:id="@+id/setting"
         android:enabled="true"

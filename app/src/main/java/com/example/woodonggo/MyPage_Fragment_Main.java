@@ -16,8 +16,6 @@ public class MyPage_Fragment_Main extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.mypage_fragment_main, container, false);
-        Toolbar toolbar = view.findViewById(R.id.toolbar);
-
         return view;
     }
 }

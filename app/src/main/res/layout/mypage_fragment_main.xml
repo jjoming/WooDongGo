@@ -17,7 +17,14 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:menu="@menu/mypage_toolbar"/>
+            app:menu="@menu/mypage_toolbar">
+
+            <ImageView
+                android:id="@+id/back"
+                android:src="@drawable/toolbar_before_36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.Toolbar>
 
         <ImageView
             android:id="@+id/text_myPage"
