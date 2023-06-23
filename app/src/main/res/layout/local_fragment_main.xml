@@ -31,7 +31,7 @@
         </androidx.appcompat.widget.Toolbar>
 
         <net.daum.mf.map.api.MapView
-            android:id="@+id/map_view"
+            android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
