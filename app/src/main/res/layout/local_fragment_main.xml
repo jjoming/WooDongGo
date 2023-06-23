@@ -30,9 +30,8 @@
                 android:textSize="24sp" />
         </androidx.appcompat.widget.Toolbar>
 
-        <ImageView
-            android:id="@+id/img_ranking"
-            android:src="@drawable/img_local"
+        <net.daum.mf.map.api.MapView
+            android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
