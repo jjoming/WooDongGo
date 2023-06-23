@@ -1,10 +1,16 @@
 package com.example.woodonggo;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -12,7 +18,12 @@ import android.widget.FrameLayout;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "SOL_LOG"; //ㅎㅐ시키
 
     public FrameLayout frameLayout;
 
@@ -22,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Chat_Fragment_Main  chat_fragment_main;
     MyPage_Fragment_Main myPage_fragment_main;
 
+    @RequiresApi(api = Build.VERSION_CODES.P) //해시키
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,5 +77,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
+            try {
+                PackageManager packageManager = getPackageManager();
+                String packageName = getPackageName();
+                PackageInfo information = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES);
+                android.content.pm.Signature[] signatures = information.signingInfo.getApkContentsSigners();
+                for (android.content.pm.Signature signature : signatures) {
+                    MessageDigest md = MessageDigest.getInstance("SHA");
+                    md.update(signature.toByteArray());
+                    byte[] digest = md.digest();
+                    String HASH_CODE = Base64.encodeToString(digest, Base64.DEFAULT);
+
+                    Log.d(TAG, "HASH_CODE -> " + HASH_CODE);
+                }
+            } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e) {
+                Log.d(TAG, "Exception -> " + e);
+
+        }
     }
 }
