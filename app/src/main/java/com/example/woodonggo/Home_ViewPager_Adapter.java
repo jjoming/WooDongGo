@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import java.util.ArrayList;
+
 public class Home_ViewPager_Adapter extends FragmentStateAdapter {
 
-    public Home_ViewPager_Adapter(@NonNull FragmentActivity fragmentActivity) {
+    public Home_ViewPager_Adapter(@NonNull FragmentActivity fragmentActivity, int home_tab_data, ArrayList<String> arrayList) {
         super(fragmentActivity);
     }
 

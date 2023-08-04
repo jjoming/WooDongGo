@@ -1,6 +1,5 @@
 package com.example.woodonggo;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,16 +10,18 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.util.ArrayList;
+
 public class Home_Fragment_Main extends Fragment {
     TabLayout tabLayout;
     ViewPager2 viewPager;
     FloatingActionButton floatingBtn;
+    private ArrayList<String> arrayList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +29,7 @@ public class Home_Fragment_Main extends Fragment {
         View view = inflater.inflate(R.layout.home_fragment_main, container, false);
         tabLayout = view.findViewById(R.id.tabLayout);
         viewPager = view.findViewById(R.id.viewPager);
-        Home_ViewPager_Adapter home_viewPager_adapter = new Home_ViewPager_Adapter(requireActivity());
+        Home_ViewPager_Adapter home_viewPager_adapter = new Home_ViewPager_Adapter(requireActivity(), R.layout.home_tab_data, arrayList);
         viewPager.setAdapter(home_viewPager_adapter);
 
         // TabLayout과 ViewPager 연동
